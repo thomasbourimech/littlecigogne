@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  description: API of a tic tac toe game
+  version: "0.1"
+  title: Tic Tac Toe
+servers:
+  - url: /api/
+
+paths:
+  /version:
+    get:
+      operationId: app.api.get_version
+      summary: Get application version
+      responses:
+        200:
+          description: Version
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
